@@ -1,0 +1,132 @@
+{
+  "handle": "syntaxx",
+  "displayName": "Louis Van Santvliet",
+  "profile": "https://cursor.com/@syntaxx",
+  "totalTokens": 288513878,
+  "createdAt": null,
+  "mostActiveMonth": "August",
+  "mostActiveDay": "Aug 26",
+  "longestStreak": 12,
+  "currentStreak": 3,
+  "agentsLocal": 78,
+  "agentsCloud": 2,
+  "longestAgentSeconds": 16472,
+  "activityCounts": [
+    {
+      "date": "2026-07-28",
+      "count": 3645532
+    },
+    {
+      "date": "2026-07-29",
+      "count": 34877779
+    },
+    {
+      "date": "2026-07-30",
+      "count": 16509993
+    },
+    {
+      "date": "2026-07-31",
+      "count": 22363453
+    },
+    {
+      "date": "2026-08-01",
+      "count": 8461203
+    },
+    {
+      "date": "2026-08-02",
+      "count": 334267
+    },
+    {
+      "date": "2026-08-03",
+      "count": 23066929
+    },
+    {
+      "date": "2026-08-04",
+      "count": 112414
+    },
+    {
+      "date": "2026-08-05",
+      "count": 2586628
+    },
+    {
+      "date": "2026-08-07",
+      "count": 9401135
+    },
+    {
+      "date": "2026-08-09",
+      "count": 7522099
+    },
+    {
+      "date": "2026-08-11",
+      "count": 2834199
+    },
+    {
+      "date": "2026-08-12",
+      "count": 8188373
+    },
+    {
+      "date": "2026-08-13",
+      "count": 23393068
+    },
+    {
+      "date": "2026-08-15",
+      "count": 4829504
+    },
+    {
+      "date": "2026-08-16",
+      "count": 4254172
+    },
+    {
+      "date": "2026-08-17",
+      "count": 2508347
+    },
+    {
+      "date": "2026-08-18",
+      "count": 13445113
+    },
+    {
+      "date": "2026-08-19",
+      "count": 380339
+    },
+    {
+      "date": "2026-08-20",
+      "count": 8237576
+    },
+    {
+      "date": "2026-08-21",
+      "count": 825358
+    },
+    {
+      "date": "2026-08-22",
+      "count": 2059206
+    },
+    {
+      "date": "2026-08-23",
+      "count": 10357407
+    },
+    {
+      "date": "2026-08-24",
+      "count": 7285447
+    },
+    {
+      "date": "2026-08-25",
+      "count": 8202102
+    },
+    {
+      "date": "2026-08-26",
+      "count": 35319583
+    },
+    {
+      "date": "2026-08-28",
+      "count": 13976278
+    },
+    {
+      "date": "2026-08-29",
+      "count": 12884880
+    },
+    {
+      "date": "2026-08-30",
+      "count": 651494
+    }
+  ]
+}

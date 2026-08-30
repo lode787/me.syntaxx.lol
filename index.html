@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>me — syntaxx.lol</title>
+    <title>me · syntaxx.lol</title>
     <meta
       name="description"
-      content="The person behind Syntaxx. Belgian Discord bot — moderation, economy, leveling, and automod."
+      content="Louis. Syntaxx, serene.fyi, and Cursor AI Pro."
     />
     <meta name="theme-color" content="#0a0a0b" />
-    <meta property="og:title" content="me — syntaxx.lol" />
+    <meta property="og:title" content="me · syntaxx.lol" />
     <meta
       property="og:description"
-      content="I build Syntaxx. A free Discord bot for servers that need more than a ping and a prayer."
+      content="I build Syntaxx and serene.fyi. I work in Cursor AI Pro."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://me.syntaxx.lol" />
@@ -29,6 +29,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/styles.css" />
+    <script>
+      try {
+        const theme = localStorage.getItem("me-theme");
+        const lang = localStorage.getItem("me-lang");
+        if (theme === "light" || theme === "dark") {
+          document.documentElement.dataset.theme = theme;
+        }
+        document.documentElement.lang = lang === "be" ? "nl-BE" : "en";
+      } catch (_) {}
+    </script>
   </head>
   <body>
     <div class="ambient" aria-hidden="true"></div>
@@ -38,16 +48,23 @@
         <img src="/syntaxx-logo.png" alt="" width="28" height="28" />
         <span>me.syntaxx.lol</span>
       </a>
-      <nav class="nav">
-        <a href="https://syntaxx.lol">syntaxx.lol</a>
-        <a href="https://github.com/lode787">GitHub</a>
-      </nav>
+      <div class="top__right">
+        <nav class="nav">
+          <a href="https://syntaxx.lol">syntaxx.lol</a>
+          <a href="https://serene.fyi">serene.fyi</a>
+          <a href="https://github.com/lode787">GitHub</a>
+        </nav>
+        <div class="prefs">
+          <button type="button" class="chip" id="lang-btn" aria-label="Language">BE</button>
+          <button type="button" class="chip" id="theme-btn" data-i18n="themeToLight">White</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="hero">
         <article class="card glass glass--l2 reveal">
-          <p class="eyebrow reveal-item">the person behind the bot</p>
+          <p class="eyebrow reveal-item">Louis · @syntaxx</p>
 
           <div class="identity reveal-item">
             <img
@@ -58,18 +75,29 @@
               height="72"
             />
             <div>
-              <h1>I build <em>Syntaxx</em>.</h1>
-              <p class="lede">
-                Belgian Discord bot. Moderation, economy, leveling, automod —
-                the unglamorous stuff servers actually need.
+              <h1 data-i18n="headline">I build <em>Syntaxx</em>.</h1>
+              <p class="lede" data-i18n="lede">
+                Belgian Discord bot. Moderation, economy, leveling, automod.
+                The unglamorous stuff servers actually need.
               </p>
             </div>
           </div>
 
-          <p class="bio reveal-item">
-            Syntaxx is free because I wanted one bot that could replace a drawer
-            of half-configured ones. If it saved you a night of case logs and
-            raid pings, a coffee keeps the lights on.
+          <p class="bio reveal-item" data-i18n="bio">
+            I work in Cursor AI Pro. The cube graph below is those days,
+            same calendar as
+            <a href="https://cursor.com/@syntaxx">cursor.com/@syntaxx</a>.
+            I also made
+            <a href="https://serene.fyi">serene.fyi</a>, a private mood
+            companion that never leaves your device. Syntaxx stays free.
+            A coffee keeps the lights on.
+          </p>
+
+          <p class="bio love reveal-item" data-i18n="cursorLove">
+            I love Cursor. Not as a slogan. I live in it. Syntaxx, Serene,
+            this page: I ship them with Cursor AI Pro because it feels like
+            a second pair of hands that already knows the repo. I would
+            rather write with it than without it. Every single day.
           </p>
 
           <div class="actions reveal-item">
@@ -77,25 +105,25 @@
               class="btn btn--primary"
               href="https://discord.com/oauth2/authorize?client_id=1055141641679290378&permissions=8&scope=bot%20applications.commands"
             >
-              Invite Syntaxx
+              <span data-i18n="invite">Invite Syntaxx</span>
               <span class="btn__arrow" aria-hidden="true">→</span>
             </a>
             <a class="btn btn--ghost" href="https://www.buymeacoffee.com/syntaxx.lol">
-              Buy a coffee
+              <span data-i18n="coffee">Buy a coffee</span>
             </a>
           </div>
 
           <dl class="now reveal-item">
             <div>
-              <dt>Now</dt>
-              <dd>Shipping Syntaxx</dd>
+              <dt data-i18n="now">Now</dt>
+              <dd data-i18n="nowValue">Shipping Syntaxx</dd>
             </div>
             <div>
-              <dt>Based</dt>
-              <dd>Belgium</dd>
+              <dt data-i18n="based">Based</dt>
+              <dd data-i18n="basedValue">Belgium</dd>
             </div>
             <div>
-              <dt>Local time</dt>
+              <dt data-i18n="localTime">Local time</dt>
               <dd>
                 <time id="local-time" datetime="">--:--</time>
               </dd>
@@ -104,28 +132,69 @@
         </article>
       </section>
 
+      <section class="graph-wrap" aria-labelledby="cursor-heading">
+        <article class="card glass glass--l2">
+          <div class="graph-head">
+            <p class="eyebrow">Cursor AI Pro</p>
+            <h2 id="cursor-heading" data-i18n="graphTitle">The days I ship in Cursor</h2>
+            <p class="lede" data-i18n="graphLede">
+              GitHub-style cubes from my public Cursor profile, painted in
+              this site's lilac. Live source:
+              <a href="https://cursor.com/@syntaxx">@syntaxx</a>.
+            </p>
+          </div>
+          <div class="heat-nav">
+            <button type="button" class="chip chip--icon" id="heat-prev" aria-label="Earlier weeks">←</button>
+            <p class="heat-nav__range" id="heat-range"></p>
+            <button type="button" class="chip chip--icon" id="heat-next" aria-label="Later weeks">→</button>
+          </div>
+          <div class="heat" id="heat"></div>
+          <dl class="now" id="graph-stats">
+            <div>
+              <dt data-i18n="longestStreak">Longest streak</dt>
+              <dd id="stat-longest">-</dd>
+            </div>
+            <div>
+              <dt data-i18n="currentStreak">Current streak</dt>
+              <dd id="stat-current">-</dd>
+            </div>
+            <div>
+              <dt data-i18n="agents">Agents</dt>
+              <dd id="stat-agents">-</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
       <section class="links" aria-labelledby="links-heading">
-        <h2 id="links-heading" class="visually-hidden">Elsewhere</h2>
+        <h2 id="links-heading" class="visually-hidden" data-i18n="elsewhere">Elsewhere</h2>
         <ul class="link-grid">
           <li class="reveal-item">
             <a class="link-card" href="https://syntaxx.lol">
-              <span class="link-card__label">Product</span>
+              <span class="link-card__label" data-i18n="product">Product</span>
               <strong>syntaxx.lol</strong>
-              <span class="link-card__hint">The bot, the features, the invite.</span>
+              <span class="link-card__hint" data-i18n="productHint">The Discord bot. Invite, features, coffee.</span>
+            </a>
+          </li>
+          <li class="reveal-item">
+            <a class="link-card" href="https://serene.fyi">
+              <span class="link-card__label" data-i18n="also">Also</span>
+              <strong>serene.fyi</strong>
+              <span class="link-card__hint" data-i18n="alsoHint">Private mood tracker. Nothing leaves the device.</span>
+            </a>
+          </li>
+          <li class="reveal-item">
+            <a class="link-card" href="https://cursor.com/@syntaxx">
+              <span class="link-card__label">Cursor</span>
+              <strong>@syntaxx</strong>
+              <span class="link-card__hint" data-i18n="cursorHint">The official cube graph and streaks.</span>
             </a>
           </li>
           <li class="reveal-item">
             <a class="link-card" href="https://github.com/lode787">
-              <span class="link-card__label">Code</span>
+              <span class="link-card__label" data-i18n="code">Code</span>
               <strong>github.com/lode787</strong>
-              <span class="link-card__hint">Bots, experiments, half-finished ideas.</span>
-            </a>
-          </li>
-          <li class="reveal-item">
-            <a class="link-card" href="https://www.buymeacoffee.com/syntaxx.lol">
-              <span class="link-card__label">Support</span>
-              <strong>Buy me a coffee</strong>
-              <span class="link-card__hint">Keeps a free bot actually free.</span>
+              <span class="link-card__hint" data-i18n="codeHint">Bots, experiments, half-finished ideas.</span>
             </a>
           </li>
         </ul>
@@ -133,9 +202,43 @@
     </main>
 
     <footer class="foot">
-      <p>© <span id="year">2026</span> Syntaxx · <a href="https://syntaxx.lol">Back to the bot</a></p>
+      <p>© <span id="year">2026</span> Syntaxx · <a href="https://syntaxx.lol" data-i18n="backToBot">Back to the bot</a></p>
     </footer>
 
+    <aside class="player glass glass--l2" aria-label="Music player">
+      <img class="player__art" src="/music/cover.png" alt="My Blood cover" width="64" height="64" />
+      <div class="player__meta">
+        <strong>My Blood</strong>
+        <span data-i18n="nowPlaying">On in the background</span>
+      </div>
+      <div class="player__transport">
+        <button type="button" class="chip chip--icon player__play" id="play-btn" aria-label="Play">
+          <span id="play-icon">▶</span>
+        </button>
+        <div class="player__seek">
+          <input
+            id="seek"
+            type="range"
+            min="0"
+            max="1000"
+            value="0"
+            step="1"
+            aria-label="Song timeline"
+          />
+          <div class="player__times">
+            <span id="t-cur">0:00</span>
+            <span id="t-dur">0:00</span>
+          </div>
+        </div>
+        <label class="player__vol">
+          <span class="visually-hidden" data-i18n="volume">Volume</span>
+          <input id="vol" type="range" min="0" max="1" step="0.01" value="0.2" aria-label="Volume" />
+        </label>
+      </div>
+      <audio id="bg-audio" src="/music/My%20Blood.mp3" preload="auto" autoplay loop></audio>
+    </aside>
+
+    <div class="heat-tip" id="heat-tip" hidden></div>
     <script src="/script.js"></script>
   </body>
 </html>

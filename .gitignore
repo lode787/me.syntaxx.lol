@@ -2,3 +2,8 @@
 .DS_Store
 Thumbs.db
 *.log
+tmp-profile.html
+tmp-chunk.txt
+_extract_activity.py
+_recolor.py
+_logo-source.png
