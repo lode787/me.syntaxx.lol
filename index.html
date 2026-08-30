@@ -16,8 +16,15 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://me.syntaxx.lol" />
-    <meta property="og:image" content="https://me.syntaxx.lol/syntaxx-logo.png" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="https://me.syntaxx.lol/og.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
+    <meta property="og:image:alt" content="Louis · me.syntaxx.lol" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="me · syntaxx.lol" />
+    <meta name="twitter:description" content="22. Born in Lierke Plezierke. I code, I make things, I need music." />
+    <meta name="twitter:image" content="https://me.syntaxx.lol/og.png" />
     <link rel="canonical" href="https://me.syntaxx.lol" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -76,20 +83,23 @@
             <div>
               <h1 data-i18n="headline">Hey, I'm <em>Louis</em>.</h1>
               <p class="lede" data-i18n="lede">
-                22. Belgium. Born in Lier, aka Lierke Plezierke.
+                22 years old, living in Belgium. Born and raised in Lier,
+                AKA Lierke Plezierke.
               </p>
             </div>
           </div>
 
           <p class="bio reveal-item" data-i18n="bio">
-            I love cats and I love coding. I make things even if nobody
-            uses them. I would not live without music, especially Tekk and
-            Uptempo. Still figuring out what belongs in a portfolio.
-            Syntaxx and Serene are some of the things I shipped anyway.
+            Cat person, code person. I build things for the fun of building
+            them, whether anyone ends up using them or not. Music is
+            non-negotiable, the harder the better: Tekk, Uptempo, that whole
+            corner. I'm still working out what a portfolio is supposed to
+            look like, but Syntaxx and Serene got made in the meantime.
           </p>
 
           <p class="bio love reveal-item" data-i18n="cursorLove">
-            Music stays on. Cursor stays open. That is pretty much the setup.
+            Most days look the same: music on, Cursor open, something
+            getting built. Honestly, that's the whole setup.
           </p>
 
           <div class="actions reveal-item">
@@ -129,8 +139,9 @@
             <p class="eyebrow">Cursor AI Pro</p>
             <h2 id="cursor-heading" data-i18n="graphTitle">The days I ship in Cursor</h2>
             <p class="lede" data-i18n="graphLede">
-              GitHub-style cubes from my public Cursor profile, painted in
-              this site's lilac. Live source:
+              Every cube is a day I spent building in Cursor, pulled straight
+              from my profile and repainted in this site's lilac. The live
+              version lives at
               <a href="https://cursor.com/@syntaxx">@syntaxx</a>.
             </p>
           </div>
@@ -199,25 +210,23 @@
         <button type="button" class="chip chip--icon player__play" id="play-btn" aria-label="Play">
           <span id="play-icon">▶</span>
         </button>
-        <div class="player__seek">
-          <input
-            id="seek"
-            type="range"
-            min="0"
-            max="1000"
-            value="0"
-            step="1"
-            aria-label="Song timeline"
-          />
-          <div class="player__times">
-            <span id="t-cur">0:00</span>
-            <span id="t-dur">0:00</span>
-          </div>
-        </div>
+        <input
+          id="seek"
+          type="range"
+          min="0"
+          max="1000"
+          value="0"
+          step="1"
+          aria-label="Song timeline"
+        />
         <label class="player__vol">
           <span class="visually-hidden" data-i18n="volume">Volume</span>
           <input id="vol" type="range" min="0" max="1" step="0.01" value="0.16" aria-label="Volume" />
         </label>
+        <div class="player__times">
+          <span id="t-cur">0:00</span>
+          <span id="t-dur">0:00</span>
+        </div>
       </div>
       <audio id="bg-audio" src="/music/My%20Blood.mp3" preload="auto" autoplay loop></audio>
     </aside>
