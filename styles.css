@@ -142,7 +142,16 @@ img {
 
 .prefs {
   display: flex;
+  flex: 0 0 auto;
   gap: 8px;
+  width: 184px;
+}
+
+.prefs .chip {
+  width: 88px;
+  min-width: 88px;
+  padding: 0;
+  justify-content: center;
 }
 
 .chip {
