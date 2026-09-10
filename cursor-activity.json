@@ -2,13 +2,13 @@
   "handle": "syntaxx",
   "displayName": "Louis Van Santvliet",
   "profile": "https://cursor.com/@syntaxx",
-  "totalTokens": 415241058,
+  "totalTokens": 418389275,
   "createdAt": "2026-07-28T19:02:44.022Z",
   "mostActiveMonth": "August",
   "mostActiveDay": "Sep 4",
   "longestStreak": 12,
-  "currentStreak": 1,
-  "agentsLocal": 71,
+  "currentStreak": 2,
+  "agentsLocal": 70,
   "agentsCloud": 0,
   "longestAgentSeconds": 16472,
   "activityCounts": [
@@ -159,6 +159,10 @@
     {
       "date": "2026-09-08",
       "count": 716952
+    },
+    {
+      "date": "2026-09-09",
+      "count": 3148217
     }
   ]
 }
