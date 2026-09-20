@@ -592,16 +592,20 @@ h1 em {
 .link-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
   margin: 16px 0 0;
   padding: 0;
 }
 
+.link-grid__cursor {
+  grid-column: 1 / -1;
+}
+
 .link-card {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 10px;
   min-height: 100%;
   padding: 18px 18px 16px;
   border: 1px solid var(--line);
@@ -611,6 +615,33 @@ h1 em {
     transform 200ms var(--ease-out),
     border-color 200ms var(--ease),
     background 200ms var(--ease);
+}
+
+.link-card--wide {
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+.link-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.link-card__icon--plain {
+  object-fit: contain;
+  padding: 5px;
+  background: #121014;
+}
+
+.link-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
 }
 
 .link-card:active {
@@ -830,6 +861,12 @@ html[data-theme="light"] .heat-tip {
   border-radius: 50%;
   background: var(--accent);
   border: 0;
+}
+
+@media (max-width: 820px) {
+  .link-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 720px) {
