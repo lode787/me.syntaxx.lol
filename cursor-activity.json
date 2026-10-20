@@ -7,10 +7,10 @@
   "mostActiveMonth": "September",
   "mostActiveDay": "Sep 20",
   "longestStreak": 12,
-  "currentStreak": 1,
-  "agentsLocal": 41,
+  "currentStreak": 0,
+  "agentsLocal": 33,
   "agentsCloud": 5,
-  "longestAgentSeconds": 11492,
+  "longestAgentSeconds": 6399,
   "activityCounts": [
     {
       "date": "2026-07-28",
