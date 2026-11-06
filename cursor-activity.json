@@ -7,8 +7,8 @@
   "mostActiveMonth": "September",
   "mostActiveDay": "Sep 20",
   "longestStreak": 12,
-  "currentStreak": 2,
-  "agentsLocal": 47,
+  "currentStreak": 0,
+  "agentsLocal": 41,
   "agentsCloud": 5,
   "longestAgentSeconds": 6399,
   "activityCounts": [
